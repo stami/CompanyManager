@@ -40,13 +40,17 @@ class EmployeeDetailViewController: UIViewController {
             salaryLabel.text = salary
         }
 
-
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func cancelToEmployeeDetailViewController(segue:UIStoryboardSegue) {
+    }
+
+    @IBAction func saveEmployeeDetail(segue:UIStoryboardSegue) {
     }
     
 
