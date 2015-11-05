@@ -49,7 +49,7 @@ class EmployeesViewController: UITableViewController {
     // Pass the selected employee to the EmployeeDetailViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "detailSegue") {
-            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! EmployeeDetailViewController
+            let controller = segue.destinationViewController as! EmployeeDetailViewController
             let myIndexPath = self.tableView.indexPathForSelectedRow!
             let row = myIndexPath.row
             let employee = employees[row]
