@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FAE7AD21BF0DD9C0097ABF4 /* CompanyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */; };
 		1FCDC7F91BEBAEA200C38929 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */; };
 		1FCDC7FB1BEBAF6F00C38929 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */; };
-		1FCDC7FD1BEBAFE300C38929 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC7FC1BEBAFE300C38929 /* SampleData.swift */; };
 		1FCDC8011BEBBD6E00C38929 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */; };
 		1FCDC8031BEBC08800C38929 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */; };
 		1FFB59281BEA861600181101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB59271BEA861600181101 /* AppDelegate.swift */; };
@@ -17,12 +17,13 @@
 		1FFB592D1BEA861600181101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB592B1BEA861600181101 /* Main.storyboard */; };
 		1FFB592F1BEA861600181101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB592E1BEA861600181101 /* Assets.xcassets */; };
 		1FFB59321BEA861600181101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB59301BEA861600181101 /* LaunchScreen.storyboard */; };
+		A1D9C825FB187E809EAC55E1 /* Pods_CompanyManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09B55B8988D974CE243C0A7 /* Pods_CompanyManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyApi.swift; sourceTree = "<group>"; };
 		1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
-		1FCDC7FC1BEBAFE300C38929 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		1FFB59241BEA861600181101 /* CompanyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +33,9 @@
 		1FFB592E1BEA861600181101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFB59311BEA861600181101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FFB59331BEA861600181101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D9C58EB8771401C56D77768 /* Pods-CompanyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompanyManager/Pods-CompanyManager.debug.xcconfig"; sourceTree = "<group>"; };
+		C09B55B8988D974CE243C0A7 /* Pods_CompanyManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompanyManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE5FC08D7B0DD7E310105A6F /* Pods-CompanyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompanyManager/Pods-CompanyManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D9C825FB187E809EAC55E1 /* Pods_CompanyManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FAE7AD01BF0DD890097ABF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */,
+				1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		1FFB591B1BEA861600181101 = {
 			isa = PBXGroup;
 			children = (
 				1FFB59261BEA861600181101 /* CompanyManager */,
 				1FFB59251BEA861600181101 /* Products */,
+				964DEB151E3A77D07EB54A9D /* Pods */,
+				B2A81B55512236D9F9259263 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,14 +85,30 @@
 				1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */,
 				1FFB592B1BEA861600181101 /* Main.storyboard */,
 				1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */,
-				1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */,
-				1FCDC7FC1BEBAFE300C38929 /* SampleData.swift */,
+				1FAE7AD01BF0DD890097ABF4 /* Model */,
 				1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */,
 				1FFB592E1BEA861600181101 /* Assets.xcassets */,
 				1FFB59301BEA861600181101 /* LaunchScreen.storyboard */,
 				1FFB59331BEA861600181101 /* Info.plist */,
 			);
 			path = CompanyManager;
+			sourceTree = "<group>";
+		};
+		964DEB151E3A77D07EB54A9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D9C58EB8771401C56D77768 /* Pods-CompanyManager.debug.xcconfig */,
+				FE5FC08D7B0DD7E310105A6F /* Pods-CompanyManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2A81B55512236D9F9259263 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C09B55B8988D974CE243C0A7 /* Pods_CompanyManager.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FFB59361BEA861600181101 /* Build configuration list for PBXNativeTarget "CompanyManager" */;
 			buildPhases = (
+				CFB8FC9C50530E66AE4E7E0B /* Check Pods Manifest.lock */,
 				1FFB59201BEA861600181101 /* Sources */,
 				1FFB59211BEA861600181101 /* Frameworks */,
 				1FFB59221BEA861600181101 /* Resources */,
+				6110BD75A7EB4AAE2B21BEE8 /* Embed Pods Frameworks */,
+				C797EB7CDC3CBFBBB9707D58 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +181,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6110BD75A7EB4AAE2B21BEE8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompanyManager/Pods-CompanyManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C797EB7CDC3CBFBBB9707D58 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompanyManager/Pods-CompanyManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFB8FC9C50530E66AE4E7E0B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1FFB59201BEA861600181101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -155,7 +238,7 @@
 				1FCDC7FB1BEBAF6F00C38929 /* Employee.swift in Sources */,
 				1FFB59281BEA861600181101 /* AppDelegate.swift in Sources */,
 				1FCDC8011BEBBD6E00C38929 /* EmployeeCell.swift in Sources */,
-				1FCDC7FD1BEBAFE300C38929 /* SampleData.swift in Sources */,
+				1FAE7AD21BF0DD9C0097ABF4 /* CompanyApi.swift in Sources */,
 				1FCDC8031BEBC08800C38929 /* EmployeeDetailViewController.swift in Sources */,
 				1FCDC7F91BEBAEA200C38929 /* EmployeesViewController.swift in Sources */,
 			);
@@ -266,6 +349,7 @@
 		};
 		1FFB59371BEA861600181101 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D9C58EB8771401C56D77768 /* Pods-CompanyManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CompanyManager/Info.plist;
@@ -277,6 +361,7 @@
 		};
 		1FFB59381BEA861600181101 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE5FC08D7B0DD7E310105A6F /* Pods-CompanyManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CompanyManager/Info.plist;
