@@ -14,7 +14,7 @@ class EmployeesViewController: UITableViewController {
     var employees:[Employee] = []
 
 
-    func loadData() {
+    func loadData(refreshControl: UIRefreshControl?) {
         dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_BACKGROUND.rawValue), 0)) {
 
             self.employees.removeAll()
@@ -44,6 +44,10 @@ class EmployeesViewController: UITableViewController {
                 }
                 dispatch_async(dispatch_get_main_queue(), {
                     self.tableView?.reloadData()
+
+                    if refreshControl != nil {
+                        refreshControl!.endRefreshing()
+                    }
                 })
             })
             }
@@ -52,13 +56,9 @@ class EmployeesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadData()
+        loadData(nil)
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.refreshControl?.addTarget(self, action: "loadData:", forControlEvents: UIControlEvents.ValueChanged)
     }
 
     override func didReceiveMemoryWarning() {
