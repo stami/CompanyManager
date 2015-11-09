@@ -25,6 +25,17 @@ class EmployeeDetailViewController: UIViewController {
 
         avatarImageView.image = UIImage(named: "Avatar")
 
+        let imgurl = "https://home.tamk.fi/~poypek/iosapi/" + employee!.image!
+        let url = NSURL(string: imgurl)
+
+        if let data = NSData(contentsOfURL: url!) {
+            avatarImageView.image = UIImage(data: data)!
+        } else {
+            // generic "no_name" image
+            avatarImageView.image = UIImage(named: "Avatar")!
+        }
+
+
         if let fname = employee?.fname {
             if let lname = employee?.lname {
                 fullNameLabel.text = fname + " " + lname

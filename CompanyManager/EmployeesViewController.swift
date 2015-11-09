@@ -7,13 +7,52 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class EmployeesViewController: UITableViewController {
 
-    var employees:[Employee] = employeesSampleData
+    var employees:[Employee] = []
+
+
+    func loadData() {
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_BACKGROUND.rawValue), 0)) {
+
+            self.employees.removeAll()
+
+            CompanyApi.getEmployees({ (employeesData) -> Void in
+                let json = JSON(data: employeesData)
+
+                if let empArray = json["data"].array {
+                    print(empArray)
+
+                    for employee in empArray {
+                        let emp = Employee(
+                            id:     employee["id"].string,
+                            fname:  employee["fname"].string,
+                            lname:  employee["lname"].string,
+                            salary: employee["salary"].string,
+                            bdate:  employee["bdate"].string,
+                            email:  employee["email"].string,
+                            dep:    employee["dep"].string,
+                            dname:  employee["dname"].string,
+                            phone1: employee["phone1"].string,
+                            phone2: employee["phone2"].string,
+                            image:  employee["image"].string
+                        )
+                        self.employees.append(emp)
+                    }
+                }
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.tableView?.reloadData()
+                })
+            })
+            }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        loadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,6 +82,17 @@ class EmployeesViewController: UITableViewController {
 
             let employee = employees[indexPath.row] as Employee
             cell.employee = employee
+
+            let imgurl = "https://home.tamk.fi/~poypek/iosapi/" + employee.image!
+            let url = NSURL(string: imgurl)
+
+            if let data = NSData(contentsOfURL: url!) {
+                cell.avatarImageView.image = UIImage(data: data)!
+            } else {
+                // generic "no_name" image
+                cell.avatarImageView.image = UIImage(named: "Avatar")!
+            }
+
             return cell
     }
 

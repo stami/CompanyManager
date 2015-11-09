@@ -11,12 +11,14 @@ import UIKit
 class EmployeeCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var departmentLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
 
     var employee: Employee! {
         didSet {
             nameLabel.text = employee.fname! + " " + employee.lname!
-            avatarImageView.image = UIImage(named: "Avatar")
+            departmentLabel.text = employee.dname
+            // avatarImageView.image = UIImage(named: "Avatar")
         }
     }
 
