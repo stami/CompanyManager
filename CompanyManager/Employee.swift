@@ -45,4 +45,10 @@ struct Employee {
         self.phone2 = phone2
         self.image = image
     }
+
+}
+
+extension Employee: Equatable {}
+func ==(a: Employee, b: Employee) -> Bool {
+    return a.id == b.id
 }

@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1FAE7AD21BF0DD9C0097ABF4 /* CompanyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */; };
+		1FAE7AD61BF119D30097ABF4 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD51BF119D30097ABF4 /* Department.swift */; };
+		1FAE7AD91BF11A3D0097ABF4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD81BF11A3D0097ABF4 /* Project.swift */; };
+		1FAE7ADB1BF11F310097ABF4 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7ADA1BF11F310097ABF4 /* ProjectCell.swift */; };
 		1FCDC7F91BEBAEA200C38929 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */; };
 		1FCDC7FB1BEBAF6F00C38929 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */; };
 		1FCDC8011BEBBD6E00C38929 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */; };
 		1FCDC8031BEBC08800C38929 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */; };
+		1FEA58AF1BFA0C6800986269 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA58AE1BFA0C6800986269 /* ProjectsViewController.swift */; };
+		1FEA58B11BFA1C7900986269 /* EmployeeEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA58B01BFA1C7900986269 /* EmployeeEditViewController.swift */; };
 		1FFB59281BEA861600181101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB59271BEA861600181101 /* AppDelegate.swift */; };
 		1FFB592A1BEA861600181101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB59291BEA861600181101 /* ViewController.swift */; };
 		1FFB592D1BEA861600181101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB592B1BEA861600181101 /* Main.storyboard */; };
@@ -22,13 +27,18 @@
 
 /* Begin PBXFileReference section */
 		1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyApi.swift; sourceTree = "<group>"; };
+		1FAE7AD51BF119D30097ABF4 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		1FAE7AD81BF11A3D0097ABF4 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		1FAE7ADA1BF11F310097ABF4 /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		1FEA58AE1BFA0C6800986269 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		1FEA58B01BFA1C7900986269 /* EmployeeEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeEditViewController.swift; sourceTree = "<group>"; };
 		1FFB59241BEA861600181101 /* CompanyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FFB59271BEA861600181101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FFB59291BEA861600181101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FFB59271BEA861600181101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CompanyManager/AppDelegate.swift; sourceTree = "<group>"; };
+		1FFB59291BEA861600181101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = CompanyManager/ViewController.swift; sourceTree = "<group>"; };
 		1FFB592C1BEA861600181101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FFB592E1BEA861600181101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFB59311BEA861600181101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,19 +60,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FAE7AD01BF0DD890097ABF4 /* Model */ = {
+		1FAE7AD31BF1198A0097ABF4 /* Employees */ = {
 			isa = PBXGroup;
 			children = (
 				1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */,
-				1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */,
+				1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */,
+				1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */,
+				1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */,
+				1FEA58B01BFA1C7900986269 /* EmployeeEditViewController.swift */,
 			);
-			name = Model;
+			name = Employees;
+			sourceTree = "<group>";
+		};
+		1FAE7AD41BF119B40097ABF4 /* Departments */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE7AD51BF119D30097ABF4 /* Department.swift */,
+			);
+			name = Departments;
+			sourceTree = "<group>";
+		};
+		1FAE7AD71BF11A2D0097ABF4 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE7AD81BF11A3D0097ABF4 /* Project.swift */,
+				1FAE7ADA1BF11F310097ABF4 /* ProjectCell.swift */,
+				1FEA58AE1BFA0C6800986269 /* ProjectsViewController.swift */,
+			);
+			name = Projects;
 			sourceTree = "<group>";
 		};
 		1FFB591B1BEA861600181101 = {
 			isa = PBXGroup;
 			children = (
 				1FFB59261BEA861600181101 /* CompanyManager */,
+				1FFB59271BEA861600181101 /* AppDelegate.swift */,
+				1FFB59291BEA861600181101 /* ViewController.swift */,
 				1FFB59251BEA861600181101 /* Products */,
 				964DEB151E3A77D07EB54A9D /* Pods */,
 				B2A81B55512236D9F9259263 /* Frameworks */,
@@ -80,13 +113,11 @@
 		1FFB59261BEA861600181101 /* CompanyManager */ = {
 			isa = PBXGroup;
 			children = (
-				1FFB59271BEA861600181101 /* AppDelegate.swift */,
-				1FFB59291BEA861600181101 /* ViewController.swift */,
-				1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */,
 				1FFB592B1BEA861600181101 /* Main.storyboard */,
-				1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */,
-				1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */,
-				1FAE7AD01BF0DD890097ABF4 /* Model */,
+				1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */,
+				1FAE7AD31BF1198A0097ABF4 /* Employees */,
+				1FAE7AD41BF119B40097ABF4 /* Departments */,
+				1FAE7AD71BF11A2D0097ABF4 /* Projects */,
 				1FFB592E1BEA861600181101 /* Assets.xcassets */,
 				1FFB59301BEA861600181101 /* LaunchScreen.storyboard */,
 				1FFB59331BEA861600181101 /* Info.plist */,
@@ -234,13 +265,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEA58B11BFA1C7900986269 /* EmployeeEditViewController.swift in Sources */,
 				1FFB592A1BEA861600181101 /* ViewController.swift in Sources */,
 				1FCDC7FB1BEBAF6F00C38929 /* Employee.swift in Sources */,
+				1FEA58AF1BFA0C6800986269 /* ProjectsViewController.swift in Sources */,
 				1FFB59281BEA861600181101 /* AppDelegate.swift in Sources */,
+				1FAE7ADB1BF11F310097ABF4 /* ProjectCell.swift in Sources */,
 				1FCDC8011BEBBD6E00C38929 /* EmployeeCell.swift in Sources */,
 				1FAE7AD21BF0DD9C0097ABF4 /* CompanyApi.swift in Sources */,
 				1FCDC8031BEBC08800C38929 /* EmployeeDetailViewController.swift in Sources */,
 				1FCDC7F91BEBAEA200C38929 /* EmployeesViewController.swift in Sources */,
+				1FAE7AD61BF119D30097ABF4 /* Department.swift in Sources */,
+				1FAE7AD91BF11A3D0097ABF4 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,45 +1,40 @@
 //
-//  EmployeesViewController.swift
+//  ProjectsViewController.swift
 //  CompanyManager
 //
-//  Created by Samuli Tamminen on 5.11.2015.
+//  Created by Samuli Tamminen on 16.11.2015.
 //  Copyright © 2015 Samuli Tamminen. All rights reserved.
 //
 
 import UIKit
 import SwiftyJSON
 
-class EmployeesViewController: UITableViewController {
+class ProjectsViewController: UITableViewController {
 
-    var employees:[Employee] = []
+    var projects:[Project] = []
 
 
     func loadData(refreshControl: UIRefreshControl?) {
         dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_BACKGROUND.rawValue), 0)) {
 
-            self.employees.removeAll()
+            self.projects.removeAll()
 
-            CompanyApi.getEmployees({ (employeesData) -> Void in
-                let json = JSON(data: employeesData)
+            CompanyApi.getProjects({ (projectsData) -> Void in
+                let json = JSON(data: projectsData)
 
-                if let empArray = json["data"].array {
-                    // print(empArray)
+                if let projArray = json["data"].array {
+                    print(projArray)
 
-                    for employee in empArray {
-                        let emp = Employee(
-                            id:     employee["id"].string,
-                            fname:  employee["fname"].string,
-                            lname:  employee["lname"].string,
-                            salary: employee["salary"].string,
-                            bdate:  employee["bdate"].string,
-                            email:  employee["email"].string,
-                            dep:    employee["dep"].string,
-                            dname:  employee["dname"].string,
-                            phone1: employee["phone1"].string,
-                            phone2: employee["phone2"].string,
-                            image:  employee["image"].string
+                    for project in projArray {
+                        let proj = Project(
+                            id:        project["id"].string,
+                            name:      project["name"].string,
+                            managerid: project["managerid"].string,
+                            fname:     project["fname"].string,
+                            lname:     project["lname"].string,
+                            image:     project["image"].string
                         )
-                        self.employees.append(emp)
+                        self.projects.append(proj)
                     }
                 }
                 dispatch_async(dispatch_get_main_queue(), {
@@ -50,8 +45,9 @@ class EmployeesViewController: UITableViewController {
                     }
                 })
             })
-            }
+        }
     }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,17 +69,17 @@ class EmployeesViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return employees.count
+        return projects.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
         -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("EmployeeCell", forIndexPath: indexPath) as! EmployeeCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("ProjectCell", forIndexPath: indexPath) as! ProjectCell
 
-            let employee = employees[indexPath.row] as Employee
-            cell.employee = employee
+            let project = projects[indexPath.row] as Project
+            cell.project = project
 
-            let imgurl = "https://home.tamk.fi/~poypek/iosapi/" + employee.image!
+            let imgurl = "https://home.tamk.fi/~poypek/iosapi/" + project.image!
             let url = NSURL(string: imgurl)
 
             if let data = NSData(contentsOfURL: url!) {
@@ -92,48 +88,18 @@ class EmployeesViewController: UITableViewController {
                 // generic "no_name" image
                 cell.avatarImageView.image = UIImage(named: "Avatar")!
             }
-
+            
             return cell
     }
 
-    // Pass the selected employee to the EmployeeDetailViewController
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "detailSegue") {
-            let controller = segue.destinationViewController as! EmployeeDetailViewController
-            let myIndexPath = self.tableView.indexPathForSelectedRow!
-            let row = myIndexPath.row
-            let employee = employees[row]
-            controller.employee = employee
 
-        }
-    }
-
-    @IBAction func deleteToEmployeesViewController(segue:UIStoryboardSegue) {
-
-        let controller = segue.sourceViewController as! EmployeeDetailViewController
-        let employee = controller.employee!
-
-        CompanyApi.deleteEmployee(employee) { (success, msg) -> () in
-            if success {
-                print(msg)
-                if let index = self.employees.indexOf(employee) {
-                    self.employees.removeAtIndex(index)
-                    self.tableView?.reloadData()
-                }
-            } else {
-                print("deleteEmployee failed!")
-            }
-        }
-
-    }
-
-
+    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
+    */
 
     /*
     // Override to support editing the table view.

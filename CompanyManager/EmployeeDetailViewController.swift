@@ -11,6 +11,7 @@ import UIKit
 class EmployeeDetailViewController: UIViewController {
 
     var employee: Employee?
+    var index: Int?
 
     @IBOutlet weak var avatarImageView: UIImageView!
 
@@ -18,7 +19,7 @@ class EmployeeDetailViewController: UIViewController {
     @IBOutlet weak var bdateLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var salaryLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
