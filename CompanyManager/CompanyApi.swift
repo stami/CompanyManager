@@ -8,7 +8,7 @@
 
 import Foundation
 
-let baseUrl = "https://home.tamk.fi/~poypek/iosapi/index.php"
+let baseUrl = "https://home.tamk.fi/~poypek/iosapi30/index.php"
 
 class CompanyApi {
 
@@ -32,6 +32,23 @@ class CompanyApi {
         })
     }
 
+    static func updateEmployee(emp: Employee, completion: (success: Bool, msg: String) -> ()) {
+        let params = [
+            "id": emp.id!,
+            "fname": emp.fname!,
+            "lname": emp.lname!,
+            "salary": emp.salary!,
+            "dep": emp.dep!,
+            "dname": emp.dname!,
+            "bdate": emp.bdate!,
+            "phone1": emp.phone1!,
+            "phone2": emp.phone2!
+        ]
+        post("/updateEmployee", params: params, completion: { (success, msg) -> () in
+            completion(success: success, msg: msg)
+        })
+    }
+
 
 
     static func getProjects(success: ((projectsData: NSData!) -> Void)) {
@@ -51,6 +68,9 @@ class CompanyApi {
             }
         });
     }
+
+
+
 
     static func get(path: String, completion: (data: NSData?, error: NSError?) -> Void) {
         let session = NSURLSession.sharedSession()

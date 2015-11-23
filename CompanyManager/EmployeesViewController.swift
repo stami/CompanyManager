@@ -98,13 +98,14 @@ class EmployeesViewController: UITableViewController {
 
     // Pass the selected employee to the EmployeeDetailViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+
         if (segue.identifier == "detailSegue") {
             let controller = segue.destinationViewController as! EmployeeDetailViewController
             let myIndexPath = self.tableView.indexPathForSelectedRow!
             let row = myIndexPath.row
             let employee = employees[row]
             controller.employee = employee
-
+            controller.index = row
         }
     }
 
@@ -125,6 +126,27 @@ class EmployeesViewController: UITableViewController {
             }
         }
 
+    }
+
+    @IBAction func updateToEmployeesViewController(segue:UIStoryboardSegue) {
+
+        let controller = segue.sourceViewController as! EmployeeDetailViewController
+        let employee = controller.employee!
+        let index = controller.index!
+
+        // print("updateToEmployeesViewController:")
+        // print(employee)
+
+        CompanyApi.updateEmployee(employee) { (success, msg) -> () in
+            if success {
+                print(msg)
+                self.employees[index] = employee
+                self.tableView?.reloadData()
+            } else {
+                print("deleteEmployee failed!")
+            }
+        }
+        
     }
 
 

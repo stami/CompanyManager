@@ -8,49 +8,70 @@
 
 import UIKit
 
-class EmployeeDetailViewController: UIViewController {
+class EmployeeDetailViewController: UITableViewController {
 
     var employee: Employee?
     var index: Int?
 
     @IBOutlet weak var avatarImageView: UIImageView!
 
-    @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var bdateLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var salaryLabel: UILabel!
+    @IBOutlet weak var image: UITextField!
+    @IBOutlet weak var fname: UITextField!
+    @IBOutlet weak var lname: UITextField!
+    @IBOutlet weak var salary: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var dep: UITextField!
+    @IBOutlet weak var bdate: UITextField!
+    @IBOutlet weak var phone1: UITextField!
+    @IBOutlet weak var phone2: UITextField!
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        avatarImageView.image = UIImage(named: "Avatar")
+//        avatarImageView.image = UIImage(named: "Avatar")
+//
+//        let imgurl = "https://home.tamk.fi/~poypek/iosapi/" + employee!.image!
+//        let url = NSURL(string: imgurl)
+//
+//        if let data = NSData(contentsOfURL: url!) {
+//            avatarImageView.image = UIImage(data: data)!
+//        } else {
+//            // generic "no_name" image
+//            avatarImageView.image = UIImage(named: "Avatar")!
+//        }
 
-        let imgurl = "https://home.tamk.fi/~poypek/iosapi/" + employee!.image!
-        let url = NSURL(string: imgurl)
-
-        if let data = NSData(contentsOfURL: url!) {
-            avatarImageView.image = UIImage(data: data)!
-        } else {
-            // generic "no_name" image
-            avatarImageView.image = UIImage(named: "Avatar")!
+        if let image = employee?.image {
+            self.image.text = image
         }
-
-
         if let fname = employee?.fname {
-            if let lname = employee?.lname {
-                fullNameLabel.text = fname + " " + lname
-            }
+            self.fname.text = fname
         }
-        if let bdate = employee?.bdate {
-            bdateLabel.text = bdate
-        }
-        if let email = employee?.email {
-            emailLabel.text = email
+        if let lname = employee?.lname {
+            self.lname.text = lname
         }
         if let salary = employee?.salary {
-            salaryLabel.text = salary
+            self.salary.text = salary
         }
+        if let email = employee?.email {
+            self.email.text = email
+        }
+        if let dep = employee?.dep {
+            self.dep.text = dep
+        }
+        if let bdate = employee?.bdate {
+            self.bdate.text = bdate
+        }
+        if let phone1 = employee?.phone1 {
+            self.phone1.text = phone1
+        }
+        if let phone2 = employee?.phone2 {
+            self.phone2.text = phone2
+        }
+
+
 
     }
 
@@ -59,12 +80,29 @@ class EmployeeDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func cancelToEmployeeDetailViewController(segue:UIStoryboardSegue) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == "updateUnwindSegue" {
+            employee?.image = self.image.text
+            employee?.fname = self.fname.text
+            employee?.lname = self.lname.text
+            employee?.salary = self.salary.text
+            employee?.email = self.email.text
+            employee?.dep = self.dep.text
+            employee?.bdate = self.bdate.text
+            employee?.phone1 = self.phone1.text
+            employee?.phone2 = self.phone2.text
+            // print("prepare for updateUnwindSegue")
+            // print(employee)
+
+        }
     }
 
-    @IBAction func saveEmployeeDetail(segue:UIStoryboardSegue) {
-    }
-    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+//        cell.textField.becomeFirstResponder()
+//    }
+
 
     /*
     // MARK: - Navigation

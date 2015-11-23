@@ -16,7 +16,6 @@
 		1FCDC8011BEBBD6E00C38929 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */; };
 		1FCDC8031BEBC08800C38929 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */; };
 		1FEA58AF1BFA0C6800986269 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA58AE1BFA0C6800986269 /* ProjectsViewController.swift */; };
-		1FEA58B11BFA1C7900986269 /* EmployeeEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA58B01BFA1C7900986269 /* EmployeeEditViewController.swift */; };
 		1FFB59281BEA861600181101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB59271BEA861600181101 /* AppDelegate.swift */; };
 		1FFB592A1BEA861600181101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB59291BEA861600181101 /* ViewController.swift */; };
 		1FFB592D1BEA861600181101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB592B1BEA861600181101 /* Main.storyboard */; };
@@ -35,7 +34,6 @@
 		1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		1FEA58AE1BFA0C6800986269 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
-		1FEA58B01BFA1C7900986269 /* EmployeeEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeEditViewController.swift; sourceTree = "<group>"; };
 		1FFB59241BEA861600181101 /* CompanyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFB59271BEA861600181101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CompanyManager/AppDelegate.swift; sourceTree = "<group>"; };
 		1FFB59291BEA861600181101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = CompanyManager/ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 				1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */,
 				1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */,
 				1FCDC8021BEBC08800C38929 /* EmployeeDetailViewController.swift */,
-				1FEA58B01BFA1C7900986269 /* EmployeeEditViewController.swift */,
 			);
 			name = Employees;
 			sourceTree = "<group>";
@@ -265,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FEA58B11BFA1C7900986269 /* EmployeeEditViewController.swift in Sources */,
 				1FFB592A1BEA861600181101 /* ViewController.swift in Sources */,
 				1FCDC7FB1BEBAF6F00C38929 /* Employee.swift in Sources */,
 				1FEA58AF1BFA0C6800986269 /* ProjectsViewController.swift in Sources */,
