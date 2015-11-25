@@ -23,6 +23,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="eHB-4V-a9Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="nJY-Oh-QpE"/>
+                                            </constraints>
+                                        </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VUt-nu-bdK">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <animations/>
@@ -48,11 +55,14 @@
                                     <animations/>
                                     <constraints>
                                         <constraint firstItem="n5V-pf-X5b" firstAttribute="trailing" secondItem="rmb-sW-Zii" secondAttribute="trailing" id="Br3-0j-RIh"/>
+                                        <constraint firstItem="eHB-4V-a9Z" firstAttribute="bottom" secondItem="VUt-nu-bdK" secondAttribute="bottom" id="KFM-v5-obx"/>
                                         <constraint firstItem="VUt-nu-bdK" firstAttribute="top" secondItem="4y7-8j-uXN" secondAttribute="top" id="MNe-vp-ODO"/>
                                         <constraint firstItem="n5V-pf-X5b" firstAttribute="top" secondItem="rmb-sW-Zii" secondAttribute="bottom" constant="1" id="SPh-vN-CKr"/>
+                                        <constraint firstItem="eHB-4V-a9Z" firstAttribute="leading" secondItem="VUt-nu-bdK" secondAttribute="leading" id="gid-rT-WiB"/>
                                         <constraint firstItem="VUt-nu-bdK" firstAttribute="centerY" secondItem="4y7-8j-uXN" secondAttribute="centerY" id="khw-wi-nrf"/>
                                         <constraint firstItem="rmb-sW-Zii" firstAttribute="centerY" secondItem="VUt-nu-bdK" secondAttribute="centerY" constant="-11.5" id="kmU-qj-bab"/>
                                         <constraint firstItem="n5V-pf-X5b" firstAttribute="bottom" secondItem="4y7-8j-uXN" secondAttribute="bottomMargin" id="qgJ-3o-EC7"/>
+                                        <constraint firstItem="eHB-4V-a9Z" firstAttribute="top" secondItem="VUt-nu-bdK" secondAttribute="top" id="r0f-pi-tHK"/>
                                         <constraint firstItem="VUt-nu-bdK" firstAttribute="leading" secondItem="4y7-8j-uXN" secondAttribute="leading" id="r3Q-jM-68b"/>
                                         <constraint firstItem="n5V-pf-X5b" firstAttribute="leading" secondItem="rmb-sW-Zii" secondAttribute="leading" id="whz-jz-79W"/>
                                         <constraint firstItem="rmb-sW-Zii" firstAttribute="leading" secondItem="VUt-nu-bdK" secondAttribute="trailing" constant="8" symbolic="YES" id="zMk-om-vE2"/>
@@ -63,6 +73,7 @@
                                     <outlet property="avatarImageView" destination="VUt-nu-bdK" id="ZYx-M4-xgr"/>
                                     <outlet property="departmentLabel" destination="n5V-pf-X5b" id="Sdf-8U-jk9"/>
                                     <outlet property="nameLabel" destination="rmb-sW-Zii" id="31l-30-rPo"/>
+                                    <outlet property="placeholderImageView" destination="eHB-4V-a9Z" id="9fm-Y3-2Lf"/>
                                     <segue destination="UIU-Ed-w2t" kind="show" identifier="detailSegue" id="Joi-U4-ZDV"/>
                                 </connections>
                             </tableViewCell>
@@ -705,4 +716,7 @@
             <point key="canvasLocation" x="220" y="599"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Placeholder" width="60" height="60"/>
+    </resources>
 </document>

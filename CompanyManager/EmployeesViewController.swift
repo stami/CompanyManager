@@ -83,16 +83,6 @@ class EmployeesViewController: UITableViewController {
             let employee = employees[indexPath.row] as Employee
             cell.employee = employee
 
-            let imgurl = "https://home.tamk.fi/~poypek/iosapi/" + employee.image!
-            let url = NSURL(string: imgurl)
-
-            if let data = NSData(contentsOfURL: url!) {
-                cell.avatarImageView.image = UIImage(data: data)!
-            } else {
-                // generic "no_name" image
-                cell.avatarImageView.image = UIImage(named: "Avatar")!
-            }
-
             return cell
     }
 

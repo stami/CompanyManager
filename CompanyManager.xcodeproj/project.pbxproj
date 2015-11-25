@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1BF54D1C0373B8007A07D9 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF54C1C0373B8007A07D9 /* Cache.swift */; };
 		1FAE7AD21BF0DD9C0097ABF4 /* CompanyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */; };
 		1FAE7AD61BF119D30097ABF4 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD51BF119D30097ABF4 /* Department.swift */; };
 		1FAE7AD91BF11A3D0097ABF4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD81BF11A3D0097ABF4 /* Project.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1BF54C1C0373B8007A07D9 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyApi.swift; sourceTree = "<group>"; };
 		1FAE7AD51BF119D30097ABF4 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		1FAE7AD81BF11A3D0097ABF4 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				1FFB592B1BEA861600181101 /* Main.storyboard */,
 				1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */,
+				1F1BF54C1C0373B8007A07D9 /* Cache.swift */,
 				1FAE7AD31BF1198A0097ABF4 /* Employees */,
 				1FAE7AD41BF119B40097ABF4 /* Departments */,
 				1FAE7AD71BF11A2D0097ABF4 /* Projects */,
@@ -272,6 +275,7 @@
 				1FCDC8031BEBC08800C38929 /* EmployeeDetailViewController.swift in Sources */,
 				1FCDC7F91BEBAEA200C38929 /* EmployeesViewController.swift in Sources */,
 				1FAE7AD61BF119D30097ABF4 /* Department.swift in Sources */,
+				1F1BF54D1C0373B8007A07D9 /* Cache.swift in Sources */,
 				1FAE7AD91BF11A3D0097ABF4 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
