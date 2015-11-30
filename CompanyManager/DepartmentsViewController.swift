@@ -92,26 +92,45 @@ class DepartmentsViewController: UITableViewController {
             controller.department = dep
             controller.index = row
         }
+
+        else if (segue.identifier == "addDepartmentSegue") {
+            let controller = segue.destinationViewController as! DepartmentDetailViewController
+            let dep = Department()
+            controller.department = dep
+            controller.index = nil
+        }
     }
 
 
 
-    @IBAction func updateToDepartmentsViewController(segue:UIStoryboardSegue) {
+    @IBAction func saveToDepartmentsViewController(segue:UIStoryboardSegue) {
 
         print("updateToDepartmentsViewController")
 
         let controller = segue.sourceViewController as! DepartmentDetailViewController
         let department = controller.department!
-        let index = controller.index!
 
-        CompanyApi.updateDepartment(department) { (success, msg) -> () in
-            if success {
-                print("updateDepartment: " + msg)
-                // print(department)
-                self.departments[index] = department
-                self.tableView?.reloadData()
-            } else {
-                print("updateDepartment failed!")
+        if let index = controller.index {
+            CompanyApi.updateDepartment(department) { (success, msg) -> () in
+                if success {
+                    print("updateDepartment: " + msg)
+                    // print(department)
+                    self.departments[index] = department
+                    self.tableView?.reloadData()
+                } else {
+                    print("updateDepartment failed!")
+                }
+            }
+        } else {
+            CompanyApi.createDepartment(department) { (success, msg) -> () in
+                if success {
+                    print("createDepartment: " + msg)
+                    // print(department)
+                    self.departments.append(department)
+                    self.tableView?.reloadData()
+                } else {
+                    print("createDepartment failed!")
+                }
             }
         }
 

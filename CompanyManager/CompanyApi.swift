@@ -91,7 +91,6 @@ class CompanyApi {
             }
         });
     }
-
     static func deleteDepartment(dep: Department, completion: (success: Bool, msg: String) -> ()) {
         let params = [
             "id": dep.id!
@@ -100,13 +99,21 @@ class CompanyApi {
             completion(success: success, msg: msg)
         })
     }
-
     static func updateDepartment(dep: Department, completion: (success: Bool, msg: String) -> ()) {
         let params = [
             "id": dep.id!,
             "name": dep.name!
         ]
         post("/updateDepartment", params: params, completion: { (success, msg) -> () in
+            completion(success: success, msg: msg)
+        })
+    }
+    static func createDepartment(dep: Department, completion: (success: Bool, msg: String) -> ()) {
+        let params = [
+            "id": dep.id!,
+            "name": dep.name!
+        ]
+        post("/createDepartment", params: params, completion: { (success, msg) -> () in
             completion(success: success, msg: msg)
         })
     }

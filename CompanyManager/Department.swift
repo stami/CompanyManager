@@ -11,6 +11,11 @@ struct Department {
     var id:   String?
     var name: String?
 
+    init() {
+        id = ""
+        name = ""
+    }
+
     init(id: String?, name: String?) {
         self.id = id
         self.name = name

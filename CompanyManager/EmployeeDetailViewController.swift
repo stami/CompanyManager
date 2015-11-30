@@ -112,7 +112,6 @@ class EmployeeDetailViewController: UITableViewController {
             if let date = employee?.bdate {
                 destination.dateString = date
             }
-
         }
 
     }

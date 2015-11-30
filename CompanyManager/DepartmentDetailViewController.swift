@@ -30,11 +30,11 @@ class DepartmentDetailViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        if segue.identifier == "updateUnwindSegue" {
+        if segue.identifier == "saveUnwindSegue" {
             department?.id = self.idTextField.text
             department?.name = self.nameTextField.text
 
-            print("prepare for updateUnwindSegue")
+            print("prepare for saveUnwindSegue")
         }
     }
 

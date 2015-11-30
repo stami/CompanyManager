@@ -139,7 +139,13 @@
                             <outlet property="delegate" destination="Ipp-7L-DmT" id="N7z-AP-BY3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Departments" id="0PD-q1-Z3Y"/>
+                    <navigationItem key="navigationItem" title="Departments" id="0PD-q1-Z3Y">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vRp-44-t4G">
+                            <connections>
+                                <segue destination="Fxi-T1-G3a" kind="show" identifier="addDepartmentSegue" id="lYW-1H-R2r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Mk1-B9-rCV">
                         <autoresizingMask key="autoresizingMask"/>
@@ -243,7 +249,7 @@
                     <navigationItem key="navigationItem" title="Department Details" id="9Sy-6o-KUt">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="iwP-0e-Rke">
                             <connections>
-                                <segue destination="MUU-Xk-QlQ" kind="unwind" identifier="updateUnwindSegue" unwindAction="updateToDepartmentsViewController:" id="FOA-rM-bdM"/>
+                                <segue destination="MUU-Xk-QlQ" kind="unwind" identifier="saveUnwindSegue" unwindAction="saveToDepartmentsViewController:" id="2fN-cw-voz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -971,6 +977,7 @@
         <image name="Placeholder" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Joi-U4-ZDV"/>
+        <segue reference="WTK-Wi-DW6"/>
+        <segue reference="lYW-1H-R2r"/>
     </inferredMetricsTieBreakers>
 </document>

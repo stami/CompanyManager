@@ -85,7 +85,6 @@
 				1FAE7AD51BF119D30097ABF4 /* Department.swift */,
 				1F3663C51C0C695D005C2210 /* DepartmentsViewController.swift */,
 				1F3663C71C0C6C91005C2210 /* DepartmentDetailViewController.swift */,
-				1F3663C91C0C9B7D005C2210 /* DepartmentPickerViewController.swift */,
 			);
 			name = Departments;
 			sourceTree = "<group>";
@@ -126,13 +125,14 @@
 				1FFB592B1BEA861600181101 /* Main.storyboard */,
 				1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */,
 				1F1BF54C1C0373B8007A07D9 /* Cache.swift */,
+				1F3663CB1C0CB258005C2210 /* DatePickerViewController.swift */,
+				1F3663C91C0C9B7D005C2210 /* DepartmentPickerViewController.swift */,
 				1FAE7AD31BF1198A0097ABF4 /* Employees */,
 				1FAE7AD41BF119B40097ABF4 /* Departments */,
 				1FAE7AD71BF11A2D0097ABF4 /* Projects */,
 				1FFB592E1BEA861600181101 /* Assets.xcassets */,
 				1FFB59301BEA861600181101 /* LaunchScreen.storyboard */,
 				1FFB59331BEA861600181101 /* Info.plist */,
-				1F3663CB1C0CB258005C2210 /* DatePickerViewController.swift */,
 			);
 			path = CompanyManager;
 			sourceTree = "<group>";
