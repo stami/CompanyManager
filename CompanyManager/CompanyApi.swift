@@ -12,7 +12,6 @@ let baseUrl = "https://home.tamk.fi/~poypek/iosapi30/index.php"
 
 class CompanyApi {
 
-
     static func getEmployees(success: ((employeesData: NSData!) -> Void)) {
         get("/employees", completion: { (data, error) -> Void in
             if let urlData = data {
@@ -60,6 +59,8 @@ class CompanyApi {
         });
     }
 
+
+
     static func getDepartments(success: ((departmentsData: NSData!) -> Void)) {
         get("/departments", completion: { (data, error) -> Void in
             if let urlData = data {
@@ -69,6 +70,24 @@ class CompanyApi {
         });
     }
 
+    static func deleteDepartment(dep: Department, completion: (success: Bool, msg: String) -> ()) {
+        let params = [
+            "id": dep.id!
+        ]
+        post("/deleteDepartment", params: params, completion: { (success, msg) -> () in
+            completion(success: success, msg: msg)
+        })
+    }
+
+    static func updateDepartment(dep: Department, completion: (success: Bool, msg: String) -> ()) {
+        let params = [
+            "id": dep.id!,
+            "name": dep.name!
+        ]
+        post("/updateDepartment", params: params, completion: { (success, msg) -> () in
+            completion(success: success, msg: msg)
+        })
+    }
 
 
 

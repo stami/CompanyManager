@@ -11,8 +11,8 @@ struct Department {
     var id:   String?
     var name: String?
 
-    init(id: String?, fname: String?) {
+    init(id: String?, name: String?) {
         self.id = id
-        self.name = fname
+        self.name = name
     }
 }
