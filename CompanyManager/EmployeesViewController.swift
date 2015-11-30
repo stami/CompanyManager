@@ -99,24 +99,7 @@ class EmployeesViewController: UITableViewController {
         }
     }
 
-    @IBAction func deleteToEmployeesViewController(segue:UIStoryboardSegue) {
 
-        let controller = segue.sourceViewController as! EmployeeDetailViewController
-        let employee = controller.employee!
-
-        CompanyApi.deleteEmployee(employee) { (success, msg) -> () in
-            if success {
-                print(msg)
-                if let index = self.employees.indexOf(employee) {
-                    self.employees.removeAtIndex(index)
-                    self.tableView?.reloadData()
-                }
-            } else {
-                print("deleteEmployee failed!")
-            }
-        }
-
-    }
 
     @IBAction func updateToEmployeesViewController(segue:UIStoryboardSegue) {
 
@@ -147,17 +130,32 @@ class EmployeesViewController: UITableViewController {
     }
 
 
-    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
+
+            // Remove department from the array
+            let employee = employees.removeAtIndex(indexPath.row)
+
+            // Remove table item
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+
+            // Delete the row from the API
+            CompanyApi.deleteEmployee(employee) { (success, msg) -> () in
+                if success {
+                    print("deleteEmployee: " + msg)
+                } else {
+                    print("deleteEmployee failed: " + msg)
+
+                    // Api call failed, put the item back into list
+                    self.employees.insert(employee, atIndex: indexPath.row)
+                    self.tableView.reloadData()
+                }
+            }
+            
+        }
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.

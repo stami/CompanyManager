@@ -29,6 +29,7 @@ class EmployeeCell: UITableViewCell {
                     // Cached: set immediately.
                     avatarImageView.image = image
                     avatarImageView.alpha = 1
+                    placeholderImageView.alpha = 0
                 } else {
                     // Not cached, so load then fade it in.
                     avatarImageView.alpha = 0
