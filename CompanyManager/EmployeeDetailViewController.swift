@@ -22,7 +22,7 @@ class EmployeeDetailViewController: UITableViewController {
     @IBOutlet weak var salary: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var dname: UILabel!
-    @IBOutlet weak var bdate: UITextField!
+    @IBOutlet weak var bdate: UILabel!
     @IBOutlet weak var phone1: UITextField!
     @IBOutlet weak var phone2: UITextField!
 
@@ -106,6 +106,15 @@ class EmployeeDetailViewController: UITableViewController {
             let dep = Department(id: employee?.dep, name: employee?.dname)
             destination.selected_dep = dep
         }
+
+        if segue.identifier == "datePickerSegue" {
+            let destination = segue.destinationViewController as! DatePickerViewController
+            if let date = employee?.bdate {
+                destination.dateString = date
+            }
+
+        }
+
     }
 
     @IBAction func setDepartmentToEmployeeDetailViewController(segue:UIStoryboardSegue) {
@@ -119,6 +128,20 @@ class EmployeeDetailViewController: UITableViewController {
         employee?.dname = department.name
         employee?.dep = department.id
     }
+
+    @IBAction func setDateEmployeeDetailViewController(segue:UIStoryboardSegue) {
+
+        let controller = segue.sourceViewController as! DatePickerViewController
+        let dateString = controller.dateString
+
+        print(dateString)
+        self.bdate.text = dateString
+        employee?.bdate = dateString
+    }
+
+    @IBAction func cancelToEmployeeDetailViewController(segue:UIStoryboardSegue) { }
+
+
 
 //    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        let cell = self.tableView.cellForRowAtIndexPath(indexPath)

@@ -608,24 +608,26 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ips-iO-HwK">
-                                                    <rect key="frame" x="116" y="7" width="290" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwX-Pb-ASi">
+                                                    <rect key="frame" x="116" y="11" width="244" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
+                                                <constraint firstItem="fwX-Pb-ASi" firstAttribute="leading" secondItem="FAS-JI-GyJ" secondAttribute="trailing" constant="8" symbolic="YES" id="1kw-1d-Jcb"/>
                                                 <constraint firstItem="FAS-JI-GyJ" firstAttribute="leading" secondItem="sFZ-Df-YHT" secondAttribute="leadingMargin" id="ESF-mi-CXu"/>
                                                 <constraint firstItem="FAS-JI-GyJ" firstAttribute="centerY" secondItem="sFZ-Df-YHT" secondAttribute="centerY" id="RPW-S7-Vzh"/>
-                                                <constraint firstItem="Ips-iO-HwK" firstAttribute="baseline" secondItem="FAS-JI-GyJ" secondAttribute="baseline" id="WVn-NG-Pju"/>
-                                                <constraint firstItem="Ips-iO-HwK" firstAttribute="trailing" secondItem="sFZ-Df-YHT" secondAttribute="trailingMargin" id="bNO-Pp-X4v"/>
-                                                <constraint firstItem="Ips-iO-HwK" firstAttribute="centerY" secondItem="FAS-JI-GyJ" secondAttribute="centerY" id="jdh-Av-x7W"/>
-                                                <constraint firstItem="Ips-iO-HwK" firstAttribute="leading" secondItem="FAS-JI-GyJ" secondAttribute="trailing" constant="8" symbolic="YES" id="pF6-HA-zOV"/>
+                                                <constraint firstItem="fwX-Pb-ASi" firstAttribute="baseline" secondItem="FAS-JI-GyJ" secondAttribute="baseline" id="wUs-ql-nDn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="7j4-1V-dD4" kind="presentation" identifier="datePickerSegue" id="KQG-o5-bfz"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="M3F-ir-oTo">
                                         <rect key="frame" x="0.0" y="416" width="414" height="44"/>
@@ -714,7 +716,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="bdate" destination="Ips-iO-HwK" id="bxn-vD-QEE"/>
+                        <outlet property="bdate" destination="fwX-Pb-ASi" id="mBv-cm-Sih"/>
                         <outlet property="dname" destination="H9S-rW-Imu" id="uAo-ej-WCo"/>
                         <outlet property="email" destination="RIR-pV-GgK" id="fEQ-I0-g70"/>
                         <outlet property="fname" destination="J5m-Gm-sth" id="NZ4-IU-9G2"/>
@@ -748,6 +750,11 @@
                                 <animations/>
                                 <items>
                                     <navigationItem title="Select Department" id="Bb3-sA-mRI">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Gog-Ht-wN3">
+                                            <connections>
+                                                <segue destination="eZm-0P-PVi" kind="unwind" unwindAction="cancelToEmployeeDetailViewController:" id="j37-Ui-YEY"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="mmc-2q-ra6">
                                             <connections>
                                                 <segue destination="eZm-0P-PVi" kind="unwind" unwindAction="setDepartmentToEmployeeDetailViewController:" id="Vtj-8D-oSl"/>
@@ -783,7 +790,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mat-dl-qJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eZm-0P-PVi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2289" y="-102"/>
+            <point key="canvasLocation" x="2296" y="-508"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="qey-Qh-hxU">
+            <objects>
+                <viewController id="7j4-1V-dD4" customClass="DatePickerViewController" customModule="CompanyManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ewQ-qX-qPO"/>
+                        <viewControllerLayoutGuide type="bottom" id="hd5-or-Ddv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u4B-64-rDo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6u-c7-1cj">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Title" id="JbF-dO-cMU">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NJJ-XA-4vm">
+                                            <connections>
+                                                <segue destination="sTB-Uq-rIr" kind="unwind" unwindAction="cancelToEmployeeDetailViewController:" id="k3y-w0-50g"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0pS-37-WC9">
+                                            <connections>
+                                                <segue destination="sTB-Uq-rIr" kind="unwind" unwindAction="setDateEmployeeDetailViewController:" id="a0R-t4-Kq3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gaj-eW-FCZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="470593668.15501499">
+                                    <!--2015-11-30 16:27:48 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gaj-eW-FCZ" firstAttribute="top" secondItem="Y6u-c7-1cj" secondAttribute="bottom" id="4G2-Gc-N7P"/>
+                            <constraint firstItem="Y6u-c7-1cj" firstAttribute="leading" secondItem="Gaj-eW-FCZ" secondAttribute="leading" id="d86-qe-qFl"/>
+                            <constraint firstItem="Y6u-c7-1cj" firstAttribute="leading" secondItem="u4B-64-rDo" secondAttribute="leading" id="geo-RK-axr"/>
+                            <constraint firstItem="Gaj-eW-FCZ" firstAttribute="trailing" secondItem="Y6u-c7-1cj" secondAttribute="trailing" id="hmf-02-4HP"/>
+                            <constraint firstItem="Y6u-c7-1cj" firstAttribute="top" secondItem="ewQ-qX-qPO" secondAttribute="bottom" id="tar-0m-W8X"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="picker" destination="Gaj-eW-FCZ" id="e1P-gl-Of5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7j-Sb-ZEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sTB-Uq-rIr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2296" y="28"/>
         </scene>
         <!--Company Inc.-->
         <scene sceneID="C6t-oT-c35">
@@ -906,6 +971,6 @@
         <image name="Placeholder" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WTK-Wi-DW6"/>
+        <segue reference="Joi-U4-ZDV"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,8 @@
 		1F1BF54D1C0373B8007A07D9 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF54C1C0373B8007A07D9 /* Cache.swift */; };
 		1F3663C61C0C695D005C2210 /* DepartmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3663C51C0C695D005C2210 /* DepartmentsViewController.swift */; };
 		1F3663C81C0C6C92005C2210 /* DepartmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3663C71C0C6C91005C2210 /* DepartmentDetailViewController.swift */; };
+		1F3663CA1C0C9B7D005C2210 /* DepartmentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3663C91C0C9B7D005C2210 /* DepartmentPickerViewController.swift */; };
+		1F3663CC1C0CB258005C2210 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3663CB1C0CB258005C2210 /* DatePickerViewController.swift */; };
 		1FAE7AD21BF0DD9C0097ABF4 /* CompanyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */; };
 		1FAE7AD61BF119D30097ABF4 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD51BF119D30097ABF4 /* Department.swift */; };
 		1FAE7AD91BF11A3D0097ABF4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD81BF11A3D0097ABF4 /* Project.swift */; };
@@ -31,6 +33,8 @@
 		1F1BF54C1C0373B8007A07D9 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		1F3663C51C0C695D005C2210 /* DepartmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentsViewController.swift; sourceTree = "<group>"; };
 		1F3663C71C0C6C91005C2210 /* DepartmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentDetailViewController.swift; sourceTree = "<group>"; };
+		1F3663C91C0C9B7D005C2210 /* DepartmentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentPickerViewController.swift; sourceTree = "<group>"; };
+		1F3663CB1C0CB258005C2210 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		1FAE7AD11BF0DD9C0097ABF4 /* CompanyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyApi.swift; sourceTree = "<group>"; };
 		1FAE7AD51BF119D30097ABF4 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		1FAE7AD81BF11A3D0097ABF4 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				1FAE7AD51BF119D30097ABF4 /* Department.swift */,
 				1F3663C51C0C695D005C2210 /* DepartmentsViewController.swift */,
 				1F3663C71C0C6C91005C2210 /* DepartmentDetailViewController.swift */,
+				1F3663C91C0C9B7D005C2210 /* DepartmentPickerViewController.swift */,
 			);
 			name = Departments;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				1FFB592E1BEA861600181101 /* Assets.xcassets */,
 				1FFB59301BEA861600181101 /* LaunchScreen.storyboard */,
 				1FFB59331BEA861600181101 /* Info.plist */,
+				1F3663CB1C0CB258005C2210 /* DatePickerViewController.swift */,
 			);
 			path = CompanyManager;
 			sourceTree = "<group>";
@@ -275,8 +281,10 @@
 				1F3663C61C0C695D005C2210 /* DepartmentsViewController.swift in Sources */,
 				1FCDC7FB1BEBAF6F00C38929 /* Employee.swift in Sources */,
 				1F3663C81C0C6C92005C2210 /* DepartmentDetailViewController.swift in Sources */,
+				1F3663CC1C0CB258005C2210 /* DatePickerViewController.swift in Sources */,
 				1FEA58AF1BFA0C6800986269 /* ProjectsViewController.swift in Sources */,
 				1FFB59281BEA861600181101 /* AppDelegate.swift in Sources */,
+				1F3663CA1C0C9B7D005C2210 /* DepartmentPickerViewController.swift in Sources */,
 				1FAE7ADB1BF11F310097ABF4 /* ProjectCell.swift in Sources */,
 				1FCDC8011BEBBD6E00C38929 /* EmployeeCell.swift in Sources */,
 				1FAE7AD21BF0DD9C0097ABF4 /* CompanyApi.swift in Sources */,
