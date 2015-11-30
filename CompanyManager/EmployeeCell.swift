@@ -23,6 +23,7 @@ class EmployeeCell: UITableViewCell {
             departmentLabel.text = employee.dname
 
             if let imgurl = employee.image {
+                print(employee.fname! + ": " + imgurl)
                 let imageUrl = NSURL(string: "https://home.tamk.fi/~poypek/iosapi/" + imgurl)
 
                 if let image = imageUrl!.cachedImage {
@@ -42,6 +43,10 @@ class EmployeeCell: UITableViewCell {
                         }
                     }
                 }
+            } else {
+                // no image
+                self.avatarImageView.alpha = 0
+                self.placeholderImageView.alpha = 1
             }
         }
     }

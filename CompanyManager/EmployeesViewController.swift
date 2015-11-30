@@ -97,26 +97,50 @@ class EmployeesViewController: UITableViewController {
             controller.employee = employee
             controller.index = row
         }
+
+        else if (segue.identifier == "addEmployeeSegue") {
+            let controller = segue.destinationViewController as! EmployeeDetailViewController
+            let employee = Employee()
+            controller.employee = employee
+            controller.index = nil
+        }
+
+
     }
 
 
 
-    @IBAction func updateToEmployeesViewController(segue:UIStoryboardSegue) {
+    @IBAction func saveToEmployeesViewController(segue:UIStoryboardSegue) {
 
         let controller = segue.sourceViewController as! EmployeeDetailViewController
         let employee = controller.employee!
-        let index = controller.index!
 
-        // print("updateToEmployeesViewController:")
-        // print(employee)
+        if let index = controller.index {
+            // print("update employee:")
+            // print(employee)
 
-        CompanyApi.updateEmployee(employee) { (success, msg) -> () in
-            if success {
-                print(msg)
-                self.employees[index] = employee
-                self.tableView?.reloadData()
-            } else {
-                print("deleteEmployee failed!")
+            CompanyApi.updateEmployee(employee) { (success, msg) -> () in
+                if success {
+                    print("updateEmployee: " + msg)
+                    self.employees[index] = employee
+                    self.tableView?.reloadData()
+                } else {
+                    print("updateEmployee failed: " + msg)
+                }
+            }
+        } else {
+            // no index set, create new Employee
+            // print("create employee:")
+            // print(employee)
+
+            CompanyApi.createEmployee(employee) { (success, msg) -> () in
+                if success {
+                    print("createEmployee: " + msg)
+                    self.employees.append(employee)
+                    self.tableView?.reloadData()
+                } else {
+                    print("createEmployee failed: " + msg)
+                }
             }
         }
         

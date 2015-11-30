@@ -37,16 +37,38 @@ class CompanyApi {
             "fname": emp.fname!,
             "lname": emp.lname!,
             "salary": emp.salary!,
+            "bdate": emp.bdate!,
+            "email": emp.email!,
             "dep": emp.dep!,
             "dname": emp.dname!,
-            "bdate": emp.bdate!,
             "phone1": emp.phone1!,
-            "phone2": emp.phone2!
+            "phone2": emp.phone2!,
+            "image": emp.image!
         ]
         post("/updateEmployee", params: params, completion: { (success, msg) -> () in
             completion(success: success, msg: msg)
         })
     }
+
+    static func createEmployee(emp: Employee, completion: (success: Bool, msg: String) -> ()) {
+        let params = [
+            "id": emp.id!,
+            "fname": emp.fname!,
+            "lname": emp.lname!,
+            "salary": emp.salary!,
+            "bdate": emp.bdate!,
+            "email": emp.email!,
+            "dep": emp.dep!,
+            "dname": emp.dname!,
+            "phone1": emp.phone1!,
+            "phone2": emp.phone2!,
+            "image": emp.image!
+        ]
+        post("/createEmployee", params: params, completion: { (success, msg) -> () in
+            completion(success: success, msg: msg)
+        })
+    }
+
 
 
 
@@ -127,6 +149,7 @@ class CompanyApi {
 
         do {
             request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.PrettyPrinted)
+            print(request.HTTPBody)
         } catch {
             print("POST error with JSONSerialization: ", error)
         }

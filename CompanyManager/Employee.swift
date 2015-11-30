@@ -21,7 +21,22 @@ struct Employee {
     var phone2: String?
     var image: String?
 
-    init(id:    String?,
+    init() {
+        self.id = ""
+        self.fname = ""
+        self.lname = ""
+        self.salary = ""
+        self.bdate = ""
+        self.email = ""
+        self.dep = ""
+        self.dname = ""
+        self.phone1 = ""
+        self.phone2 = ""
+        self.image = ""
+    }
+
+    init(
+        id:    String?,
         fname:  String?,
         lname:  String?,
         salary: String?,

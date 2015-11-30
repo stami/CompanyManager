@@ -15,6 +15,7 @@ class EmployeeDetailViewController: UITableViewController {
 
     @IBOutlet weak var avatarImageView: UIImageView!
 
+    @IBOutlet weak var id: UITextField!
     @IBOutlet weak var image: UITextField!
     @IBOutlet weak var fname: UITextField!
     @IBOutlet weak var lname: UITextField!
@@ -43,6 +44,9 @@ class EmployeeDetailViewController: UITableViewController {
 //            avatarImageView.image = UIImage(named: "Avatar")!
 //        }
 
+        if let id = employee?.id {
+            self.id.text = id
+        }
         if let image = employee?.image {
             self.image.text = image
         }
@@ -82,7 +86,8 @@ class EmployeeDetailViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        if segue.identifier == "updateUnwindSegue" {
+        if segue.identifier == "saveUnwindSegue" {
+            employee?.id = self.id.text
             employee?.image = self.image.text
             employee?.fname = self.fname.text
             employee?.lname = self.lname.text
@@ -92,8 +97,8 @@ class EmployeeDetailViewController: UITableViewController {
             employee?.bdate = self.bdate.text
             employee?.phone1 = self.phone1.text
             employee?.phone2 = self.phone2.text
-            // print("prepare for updateUnwindSegue")
-            // print(employee)
+            print("prepare for saveUnwindSegue")
+            print(employee)
 
         }
     }
