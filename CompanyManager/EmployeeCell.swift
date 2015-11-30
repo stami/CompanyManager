@@ -23,7 +23,7 @@ class EmployeeCell: UITableViewCell {
             departmentLabel.text = employee.dname
 
             if let imgurl = employee.image {
-                print(employee.fname! + ": " + imgurl)
+                //print(employee.fname! + ": " + imgurl)
                 let imageUrl = NSURL(string: "https://home.tamk.fi/~poypek/iosapi/" + imgurl)
 
                 if let image = imageUrl!.cachedImage {

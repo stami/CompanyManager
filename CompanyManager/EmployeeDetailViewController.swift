@@ -21,7 +21,7 @@ class EmployeeDetailViewController: UITableViewController {
     @IBOutlet weak var lname: UITextField!
     @IBOutlet weak var salary: UITextField!
     @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var dep: UITextField!
+    @IBOutlet weak var dname: UILabel!
     @IBOutlet weak var bdate: UITextField!
     @IBOutlet weak var phone1: UITextField!
     @IBOutlet weak var phone2: UITextField!
@@ -62,8 +62,8 @@ class EmployeeDetailViewController: UITableViewController {
         if let email = employee?.email {
             self.email.text = email
         }
-        if let dep = employee?.dep {
-            self.dep.text = dep
+        if let dname = employee?.dname {
+            self.dname.text = dname
         }
         if let bdate = employee?.bdate {
             self.bdate.text = bdate
@@ -93,14 +93,31 @@ class EmployeeDetailViewController: UITableViewController {
             employee?.lname = self.lname.text
             employee?.salary = self.salary.text
             employee?.email = self.email.text
-            employee?.dep = self.dep.text
+            //employee?.dep = self.dep.text
             employee?.bdate = self.bdate.text
             employee?.phone1 = self.phone1.text
             employee?.phone2 = self.phone2.text
             print("prepare for saveUnwindSegue")
             print(employee)
-
         }
+
+        if segue.identifier == "departmentPickerSegue" {
+            let destination = segue.destinationViewController as! DepartmentPickerViewController
+            let dep = Department(id: employee?.dep, name: employee?.dname)
+            destination.selected_dep = dep
+        }
+    }
+
+    @IBAction func setDepartmentToEmployeeDetailViewController(segue:UIStoryboardSegue) {
+
+        let controller = segue.sourceViewController as! DepartmentPickerViewController
+        let department = controller.selected_dep!
+
+        print(department)
+
+        self.dname.text = department.name
+        employee?.dname = department.name
+        employee?.dep = department.id
     }
 
 //    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
