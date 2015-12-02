@@ -1,0 +1,6 @@
+framework module Pods_CompanyManager {
+  umbrella header "Pods-CompanyManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
