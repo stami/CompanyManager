@@ -16,6 +16,7 @@
 		1FAE7AD61BF119D30097ABF4 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD51BF119D30097ABF4 /* Department.swift */; };
 		1FAE7AD91BF11A3D0097ABF4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7AD81BF11A3D0097ABF4 /* Project.swift */; };
 		1FAE7ADB1BF11F310097ABF4 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7ADA1BF11F310097ABF4 /* ProjectCell.swift */; };
+		1FB075851C0EEEB500E5FDFB /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB075841C0EEEB500E5FDFB /* ProjectDetailViewController.swift */; };
 		1FCDC7F91BEBAEA200C38929 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */; };
 		1FCDC7FB1BEBAF6F00C38929 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */; };
 		1FCDC8011BEBBD6E00C38929 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */; };
@@ -39,6 +40,7 @@
 		1FAE7AD51BF119D30097ABF4 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		1FAE7AD81BF11A3D0097ABF4 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		1FAE7ADA1BF11F310097ABF4 /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		1FB075841C0EEEB500E5FDFB /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		1FCDC7F81BEBAEA200C38929 /* EmployeesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		1FCDC7FA1BEBAF6F00C38929 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		1FCDC8001BEBBD6E00C38929 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				1FAE7AD81BF11A3D0097ABF4 /* Project.swift */,
 				1FAE7ADA1BF11F310097ABF4 /* ProjectCell.swift */,
 				1FEA58AE1BFA0C6800986269 /* ProjectsViewController.swift */,
+				1FB075841C0EEEB500E5FDFB /* ProjectDetailViewController.swift */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				1FCDC7FB1BEBAF6F00C38929 /* Employee.swift in Sources */,
 				1F3663C81C0C6C92005C2210 /* DepartmentDetailViewController.swift in Sources */,
 				1F3663CC1C0CB258005C2210 /* DatePickerViewController.swift in Sources */,
+				1FB075851C0EEEB500E5FDFB /* ProjectDetailViewController.swift in Sources */,
 				1FEA58AF1BFA0C6800986269 /* ProjectsViewController.swift in Sources */,
 				1FFB59281BEA861600181101 /* AppDelegate.swift in Sources */,
 				1F3663CA1C0C9B7D005C2210 /* DepartmentPickerViewController.swift in Sources */,

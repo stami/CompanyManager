@@ -59,7 +59,6 @@ class ProjectsViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -78,40 +77,102 @@ class ProjectsViewController: UITableViewController {
 
             let project = projects[indexPath.row] as Project
             cell.project = project
-
-            let imgurl = "https://home.tamk.fi/~poypek/iosapi/" + project.image!
-            let url = NSURL(string: imgurl)
-
-            if let data = NSData(contentsOfURL: url!) {
-                cell.avatarImageView.image = UIImage(data: data)!
-            } else {
-                // generic "no_name" image
-                cell.avatarImageView.image = UIImage(named: "Avatar")!
-            }
             
             return cell
     }
 
 
-    /*
+    // Pass the selected employee to the EmployeeDetailViewController
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+
+        if (segue.identifier == "detailSegue") {
+            let controller = segue.destinationViewController as! ProjectDetailViewController
+            let myIndexPath = self.tableView.indexPathForSelectedRow!
+            let row = myIndexPath.row
+            let project = projects[row]
+            controller.project = project
+            controller.index = row
+        }
+
+        else if (segue.identifier == "addProjectSegue") {
+            let controller = segue.destinationViewController as! ProjectDetailViewController
+            let project = Project()
+            controller.project = project
+            controller.index = nil
+        }
+        
+    }
+
+
+    @IBAction func saveToProjectsViewController(segue:UIStoryboardSegue) {
+
+        let controller = segue.sourceViewController as! ProjectDetailViewController
+        let project = controller.project!
+
+        if let index = controller.index {
+            // print("update employee:")
+            // print(employee)
+
+            CompanyApi.updateProject(project) { (success, msg) -> () in
+                if success {
+                    print("updateProject: " + msg)
+                    self.projects[index] = project
+                    self.tableView?.reloadData()
+                } else {
+                    print("updateProject failed: " + msg)
+                }
+            }
+        } else {
+            // no index set, create new Employee
+            // print("create employee:")
+            // print(employee)
+
+            CompanyApi.createProject(project) { (success, msg) -> () in
+                if success {
+                    print("createProject: " + msg)
+                    self.projects.append(project)
+                    self.tableView?.reloadData()
+                } else {
+                    print("createProject failed: " + msg)
+                }
+            }
+        }
+        
+    }
+
+
+
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
+
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
+
+            // Remove department from the array
+            let project = projects.removeAtIndex(indexPath.row)
+
+            // Remove table item
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+
+            // Delete the row from the API
+            CompanyApi.deleteProject(project) { (success, msg) -> () in
+                if success {
+                    print("deleteProject: " + msg)
+                } else {
+                    print("deleteProject failed: " + msg)
+
+                    // Api call failed, put the item back into list
+                    self.projects.insert(project, atIndex: indexPath.row)
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.

@@ -15,7 +15,18 @@ struct Project {
     var lname: String?
     var image: String?
 
-    init(id:   String?,
+    init()
+    {
+        self.id = ""
+        self.name = ""
+        self.managerid = ""
+        self.fname = ""
+        self.lname = ""
+        self.image = ""
+    }
+
+    init(
+        id:   String?,
         name:  String?,
         managerid: String?,
         fname: String?,

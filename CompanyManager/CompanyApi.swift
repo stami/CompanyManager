@@ -80,6 +80,40 @@ class CompanyApi {
             }
         });
     }
+    static func deleteProject(proj: Project, completion: (success: Bool, msg: String) -> ()) {
+        let params = [
+            "id": proj.id!
+        ]
+        post("/deleteProject", params: params, completion: { (success, msg) -> () in
+            completion(success: success, msg: msg)
+        })
+    }
+    static func updateProject(proj: Project, completion: (success: Bool, msg: String) -> ()) {
+        let params = [
+            "id": proj.id!,
+            "name": proj.name!,
+            "image": proj.image!,
+            "managerid": proj.managerid!,
+            "fname": proj.fname!,
+            "lname": proj.lname!
+        ]
+        post("/updateProject", params: params, completion: { (success, msg) -> () in
+            completion(success: success, msg: msg)
+        })
+    }
+    static func createProject(proj: Project, completion: (success: Bool, msg: String) -> ()) {
+        let params = [
+            "id": proj.id!,
+            "name": proj.name!,
+            "image": proj.image!,
+            "managerid": proj.managerid!,
+            "fname": proj.fname!,
+            "lname": proj.lname!
+        ]
+        post("/createProject", params: params, completion: { (success, msg) -> () in
+            completion(success: success, msg: msg)
+        })
+    }
 
 
 
@@ -156,7 +190,7 @@ class CompanyApi {
 
         do {
             request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.PrettyPrinted)
-            print(request.HTTPBody)
+            //print(request.HTTPBody)
         } catch {
             print("POST error with JSONSerialization: ", error)
         }
