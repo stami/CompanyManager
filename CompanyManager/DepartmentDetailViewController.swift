@@ -34,7 +34,7 @@ class DepartmentDetailViewController: UITableViewController {
             department?.id = self.idTextField.text
             department?.name = self.nameTextField.text
 
-            print("prepare for saveUnwindSegue")
+            // print("prepare for saveUnwindSegue")
         }
     }
 

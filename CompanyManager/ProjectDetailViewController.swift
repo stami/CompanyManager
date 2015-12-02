@@ -77,28 +77,23 @@ class ProjectDetailViewController: UITableViewController {
             project?.lname = self.lnameTextField.text
 
             print("prepare for saveUnwindSegue")
-            print(project)
+            //print(project)
         }
 
     }
 
     @IBAction func setDepartmentToEmployeeDetailViewController(segue:UIStoryboardSegue) {
 
-        let controller = segue.sourceViewController as! DepartmentPickerViewController
-        let department = controller.selected_dep!
-
-        print(department)
-//
-//        self.dname.text = department.name
-//        employee?.dname = department.name
-//        employee?.dep = department.id
+        // let controller = segue.sourceViewController as! DepartmentPickerViewController
+        // let department = controller.selected_dep!
+        // print(department)
     }
 
     @IBAction func setDateEmployeeDetailViewController(segue:UIStoryboardSegue) {
-//
+
 //        let controller = segue.sourceViewController as! DatePickerViewController
 //        let dateString = controller.dateString
-//        
+
 //        print(dateString)
 //        self.bdate.text = dateString
 //        employee?.bdate = dateString

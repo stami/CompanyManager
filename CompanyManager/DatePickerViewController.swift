@@ -37,7 +37,7 @@ class DatePickerViewController: UIViewController {
         dateFormatter.dateFormat = "Y-MM-dd"
 
         dateString = dateFormatter.stringFromDate(datePicker.date)
-        print(dateString)
+        // print(dateString)
 
     }
     

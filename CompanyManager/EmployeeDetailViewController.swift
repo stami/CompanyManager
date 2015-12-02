@@ -98,7 +98,7 @@ class EmployeeDetailViewController: UITableViewController {
             employee?.phone1 = self.phone1.text
             employee?.phone2 = self.phone2.text
             print("prepare for saveUnwindSegue")
-            print(employee)
+            // print(employee)
         }
 
         if segue.identifier == "departmentPickerSegue" {
@@ -121,8 +121,7 @@ class EmployeeDetailViewController: UITableViewController {
         let controller = segue.sourceViewController as! DepartmentPickerViewController
         let department = controller.selected_dep!
 
-        print(department)
-
+        // print(department)
         self.dname.text = department.name
         employee?.dname = department.name
         employee?.dep = department.id
@@ -133,7 +132,7 @@ class EmployeeDetailViewController: UITableViewController {
         let controller = segue.sourceViewController as! DatePickerViewController
         let dateString = controller.dateString
 
-        print(dateString)
+        // print(dateString)
         self.bdate.text = dateString
         employee?.bdate = dateString
     }

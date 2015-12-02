@@ -23,7 +23,7 @@ class ProjectsViewController: UITableViewController {
                 let json = JSON(data: projectsData)
 
                 if let projArray = json["data"].array {
-                    print(projArray)
+                    // print(projArray)
 
                     for project in projArray {
                         let proj = Project(

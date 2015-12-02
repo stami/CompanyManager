@@ -75,7 +75,7 @@ class CompanyApi {
     static func getProjects(success: ((projectsData: NSData!) -> Void)) {
         get("/projects", completion: { (data, error) -> Void in
             if let urlData = data {
-                print(data);
+                // print(data);
                 success(projectsData: urlData)
             }
         });
@@ -120,7 +120,7 @@ class CompanyApi {
     static func getDepartments(success: ((departmentsData: NSData!) -> Void)) {
         get("/departments", completion: { (data, error) -> Void in
             if let urlData = data {
-                print(data);
+                // print(data);
                 success(departmentsData: urlData)
             }
         });

@@ -1086,7 +1086,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="Title" id="JbF-dO-cMU">
+                                    <navigationItem title="Birth Date" id="JbF-dO-cMU">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NJJ-XA-4vm">
                                             <connections>
                                                 <segue destination="sTB-Uq-rIr" kind="unwind" unwindAction="cancelToEmployeeDetailViewController:" id="k3y-w0-50g"/>
