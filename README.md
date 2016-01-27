@@ -13,3 +13,8 @@ Lisäksi
 - AppIcon
 - DatePicker syntymäpäivän valitsemiseen
 - DepartmentPicker osaston valitsemiseen
+
+<img src="company1.jpg" width="30%">
+<img src="company2.jpg" width="30%">
+<img src="company3.jpg" width="30%">
+
