@@ -14,7 +14,6 @@ Lisäksi
 - DatePicker syntymäpäivän valitsemiseen
 - DepartmentPicker osaston valitsemiseen
 
-<img src="company1.jpg" width="30%">
-<img src="company2.jpg" width="30%">
-<img src="company3.jpg" width="30%">
-
+![screenshot1](company1.jpg)
+![screenshot1](company2.jpg)
+![screenshot1](company3.jpg)
